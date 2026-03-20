@@ -9,20 +9,19 @@ interface Slide {
 }
 
 const SLIDES: Slide[] = [
-  { src: '/img/slides/browser_homepage.png', title: 'Control your data. Trust your network.', subtitle: 'The Sofia homepage — TRUST or DISTRUST any page you visit.' },
-  { src: '/img/slides/browser_socials.png', title: 'Connect Your Socials.', subtitle: 'Link X, Discord, YouTube, Twitch — build your on-chain identity from verified social proof.' },
-  { src: '/img/slides/browser_signals.png', title: 'Trust signals right where you browse.', subtitle: 'See your network\'s signals on any page, ranked by TRUST staked.' },
-  { src: '/img/slides/browser_trendings.png', title: 'Browse the latest Trendings.', subtitle: 'Most certified URLs across all Sofia users — Trusted, Distrusted, by category.' },
-  { src: '/img/slides/browser_echoes.png', title: 'Your browsing, verified on-chain.', subtitle: 'Echoes tracks your domains, URLs, on-chain certifications and time spent.' },
-  { src: '/img/slides/browser_circle.png', title: 'Connect with friends. Build your circle.', subtitle: 'Circle Feed — content curated by your trust circle, filtered by intention.' },
-  { src: '/img/slides/browser_community.png', title: 'Vote on claims. Support or Oppose.', subtitle: 'Featured Claims from the Intuition community — stake TRUST to take a position.' },
-  { src: '/img/slides/browser_pulse.png', title: 'Pulse Analysis. Your AI knows you.', subtitle: 'Your personal AI analyzes your sessions — research, explore, compare, plan.' },
-  { src: '/img/slides/browser_quest.png', title: 'Complete Quests. Earn Gold.', subtitle: 'Daily, weekly and special quests — certify, vote, streak to earn rewards.' },
-  { src: '/img/slides/browser_bookmark.png', title: 'Smart Bookmarks.', subtitle: 'Search, sort, filter — your bookmarks enriched with on-chain data.' },
-  { src: '/img/slides/browser_statspage.png', title: 'Page Stats.', subtitle: 'Blockchain stats for any page — certifiers, TRUST staked, market cap.' },
-  { src: '/img/slides/browser_vote-tab-intuition.png', title: 'Featured Claims & Lists.', subtitle: 'Notable claims from the Intuition community — support or oppose with real skin in the game.' },
-  { src: '/img/slides/browser_wieedzeprofil.png', title: 'Your Profile.', subtitle: 'ENS name, signals count, Gold earned, social badges — your on-chain reputation.' },
-  { src: '/img/slides/browser_user_interest.png', title: 'Interest Analysis.', subtitle: 'AI-detected interests from your browsing — crypto finance, blockchain, collaboration tools.' },
+  { src: '/img/slides/homepage.png', title: 'Control your data. Trust your network.', subtitle: 'The Sofia homepage — TRUST or DISTRUST any page you visit.' },
+  { src: '/img/slides/socials.png', title: 'Connect Your Socials.', subtitle: 'Link X, Discord, YouTube, Twitch — build your on-chain identity from verified social proof.' },
+  { src: '/img/slides/signals.png', title: 'Trust signals right where you browse.', subtitle: 'See your network\'s signals on any page, ranked by TRUST staked.' },
+  { src: '/img/slides/trendings.png', title: 'Browse the latest Trendings.', subtitle: 'Most certified URLs across all Sofia users — Trusted, Distrusted, by category.' },
+  { src: '/img/slides/echoes.png', title: 'Your browsing, verified on-chain.', subtitle: 'Echoes tracks your domains, URLs, on-chain certifications and time spent.' },
+  { src: '/img/slides/circle.png', title: 'Connect with friends. Build your circle.', subtitle: 'Circle Feed — content curated by your trust circle, filtered by intention.' },
+  { src: '/img/slides/community.png', title: 'Vote on claims. Support or Oppose.', subtitle: 'Featured Claims from the Intuition community — stake TRUST to take a position.' },
+  { src: '/img/slides/pulse.png', title: 'Pulse Analysis. Your AI knows you.', subtitle: 'Your personal AI analyzes your sessions — research, explore, compare, plan.' },
+  { src: '/img/slides/quest.png', title: 'Complete Quests. Earn Gold.', subtitle: 'Daily, weekly and special quests — certify, vote, streak to earn rewards.' },
+  { src: '/img/slides/bookmark.png', title: 'Smart Bookmarks.', subtitle: 'Search, sort, filter — your bookmarks enriched with on-chain data.' },
+  { src: '/img/slides/statspage.png', title: 'Page Stats.', subtitle: 'Blockchain stats for any page — certifiers, TRUST staked, market cap.' },
+  { src: '/img/slides/wieedzeprofil.png', title: 'Your Profile.', subtitle: 'ENS name, signals count, Gold earned, social badges — your on-chain reputation.' },
+  { src: '/img/slides/user interest.png', title: 'Interest Analysis.', subtitle: 'AI-detected interests from your browsing — crypto finance, blockchain, collaboration tools.' },
 ];
 
 export function Carousel() {
