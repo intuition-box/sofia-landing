@@ -2,7 +2,7 @@ const DOCS_BASE = import.meta.env.VITE_DOCS_URL ?? 'https://docs-sofia.intuition
 
 export const URLS = {
   docs: {
-    intro: `${DOCS_BASE}/intro`,
+    intro: DOCS_BASE,
     manifesto: `${DOCS_BASE}/manifesto`,
     gettingStarted: `${DOCS_BASE}/features/getting-started`,
     certifications: `${DOCS_BASE}/features/certifications`,
