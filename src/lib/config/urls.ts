@@ -1,4 +1,4 @@
-const DOCS_BASE = import.meta.env.VITE_DOCS_URL ?? 'https://docs.sofia.intuition.box';
+const DOCS_BASE = import.meta.env.VITE_DOCS_URL ?? 'https://docs-sofia.intuition.box';
 
 export const URLS = {
   docs: {
