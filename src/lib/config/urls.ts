@@ -1,4 +1,4 @@
-const DOCS_BASE = import.meta.env.VITE_DOCS_URL ?? 'http://localhost:3001/docs-app';
+const DOCS_BASE = import.meta.env.VITE_DOCS_URL ?? 'https://docs.sofia.intuition.box';
 
 export const URLS = {
   docs: {
