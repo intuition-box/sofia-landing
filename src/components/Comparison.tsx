@@ -24,22 +24,15 @@ const CHECK = [
 
 export function Comparison() {
   const titleRef = useScrollAnim();
+  const subRef = useScrollAnim();
   const tableRef = useScrollAnim();
 
   return (
     <ParallaxBg src="/img/bg5.png" speed={0.15} zoom zoomMax={1.1} className={styles.section}>
       <div className="container">
         <h2 ref={titleRef} className={`section-title anim ${styles.centered}`}>Sofia vs. the status quo.</h2>
-        <p className={`section-subtitle anim ${styles.sub}`}>A transparent, user-first approach to digital identity.</p>
+        <p ref={subRef} className={`section-subtitle anim ${styles.sub}`}>A transparent, user-first approach to digital identity.</p>
 
-        <div className={`${styles.ctas} anim`}>
-          <a href="https://discord.gg/bDXWsV7Bb" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#e8e6e3', color: '#0a0a0a' }}>
-            Discover More <Arrow />
-          </a>
-          <a href={URLS.docs.intro} target="_blank" rel="noopener noreferrer" className="btn" style={{ background: 'transparent', color: '#e8e6e3', border: '1px solid #3a3a3a' }}>
-            Read Documentation <Arrow />
-          </a>
-        </div>
 
         <table ref={tableRef as React.Ref<HTMLTableElement>} className={`${styles.table} anim`}>
           <thead>

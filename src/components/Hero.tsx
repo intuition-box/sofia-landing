@@ -1,8 +1,12 @@
-import { useEffect, useState, useRef, useCallback } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Arrow } from './Arrow';
 import { useScrollAnim } from '../hooks/useScrollAnim';
 import { URLS } from '../lib/config/urls';
 import styles from './Hero.module.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const PARTNERS = [
   { name: 'Mastra', logo: '/img/partners/mastra.svg', url: 'https://mastra.ai/' },
@@ -14,16 +18,26 @@ const PARTNERS = [
 
 function Countdown() {
   const [display, setDisplay] = useState('');
+  const [label, setLabel] = useState('');
 
   useEffect(() => {
-    const end = new Date('2026-04-15T00:00:00');
+    const start = new Date('2026-03-27T00:00:00');
+    const end = new Date('2026-04-27T00:00:00');
+
     const update = () => {
-      const diff = Math.max(0, end.getTime() - Date.now());
+      const now = Date.now();
+      const hasStarted = now >= start.getTime();
+      const target = hasStarted ? end : start;
+      const diff = Math.max(0, target.getTime() - now);
       const d = Math.floor(diff / 864e5);
       const h = Math.floor((diff % 864e5) / 36e5);
       const m = Math.floor((diff % 36e5) / 6e4);
       const s = Math.floor((diff % 6e4) / 1e3);
       setDisplay(`${d}d ${String(h).padStart(2, '0')}h ${String(m).padStart(2, '0')}m ${String(s).padStart(2, '0')}s`);
+      setLabel(hasStarted
+        ? 'until Alpha Tester Reward Program ends'
+        : 'until Alpha Tester Reward Program starts'
+      );
     };
     update();
     const id = setInterval(update, 1000);
@@ -33,7 +47,7 @@ function Countdown() {
   return (
     <div className={styles.countdown}>
       <span className={styles.countdownNum}>{display}</span>
-      <span className={styles.countdownLabel}>until Alpha Tester Reward Program ends</span>
+      <span className={styles.countdownLabel}>{label}</span>
     </div>
   );
 }
@@ -43,35 +57,38 @@ export function Hero() {
   const greenRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLElement>(null);
 
-  const handleScroll = useCallback(() => {
-    const hero = heroRef.current;
-    const green = greenRef.current;
-    if (!hero || !green) return;
-
-    const scrollY = window.scrollY;
-    const heroH = hero.offsetHeight;
-    const raw = Math.min(1, Math.max(0, scrollY / (heroH * 0.6)));
-
-    // Ease in-out cubic: smooth acceleration and deceleration
-    const p = raw < 0.5
-      ? 4 * raw * raw * raw
-      : 1 - Math.pow(-2 * raw + 2, 3) / 2;
-
-    const marginX = Math.max(0, 40 * (1 - p));
-    const radius = Math.max(0, 16 * (1 - p));
-    const marginTop = Math.max(0, 20 * (1 - p));
-
-    green.style.marginLeft = `${-marginX}px`;
-    green.style.marginRight = `${-marginX}px`;
-    green.style.marginTop = `${-marginTop}px`;
-    green.style.borderRadius = `${radius}px`;
-  }, []);
-
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
+    const green = greenRef.current;
+    const hero = heroRef.current;
+    if (!green || !hero) return;
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: hero,
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 0.6,
+      },
+    });
+
+    tl.fromTo(green, {
+      marginLeft: 0,
+      marginRight: 0,
+      marginTop: 0,
+      borderRadius: '16px',
+    }, {
+      marginLeft: -40,
+      marginRight: -40,
+      marginTop: -20,
+      borderRadius: '0px',
+      ease: 'power2.inOut',
+    });
+
+    return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+    };
+  }, []);
 
   return (
     <section ref={heroRef} className={styles.hero}>
