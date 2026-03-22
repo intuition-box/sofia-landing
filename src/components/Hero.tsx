@@ -74,12 +74,10 @@ export function Hero() {
       marginLeft: 0,
       marginRight: 0,
       marginTop: 0,
-      borderRadius: '16px',
     }, {
       marginLeft: -40,
       marginRight: -40,
       marginTop: -20,
-      borderRadius: '0px',
       ease: 'power2.inOut',
     });
 
