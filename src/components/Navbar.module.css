@@ -20,6 +20,9 @@
 }
 
 .menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: var(--space-lg);
@@ -148,6 +151,7 @@
   .menu {
     display: none;
     position: fixed;
+    transform: none;
     top: 60px;
     left: 16px;
     right: 16px;

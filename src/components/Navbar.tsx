@@ -2,16 +2,14 @@ import { useState } from 'react';
 import { Arrow } from './Arrow';
 import { ThemeToggle } from './ThemeToggle';
 import { useWalletConnection } from '../hooks/useWalletConnection';
-import { URLS } from '../lib/config/urls';
 import styles from './Navbar.module.css';
 
 const NAV_LINKS = [
   { label: 'Features', href: '#features' },
   { label: 'Values', href: '#values' },
-  { label: 'Docs', href: URLS.docs.intro },
+  { label: 'Docs', href: 'https://doc.sofia.intuition.box' },
   { label: 'Team', href: '#team' },
   { label: 'FAQ', href: '#faq' },
-  { label: 'Sofia Chronicles', href: '#chronicles' },
 ];
 
 export function Navbar() {

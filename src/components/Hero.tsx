@@ -3,7 +3,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Arrow } from './Arrow';
 import { useScrollAnim } from '../hooks/useScrollAnim';
-import { URLS } from '../lib/config/urls';
 import styles from './Hero.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -100,16 +99,20 @@ export function Hero() {
 
       <div ref={greenRef} className={styles.greenWrap}>
         <img
-          src="/img/screenshots/homepage.png"
+          src="/img/sofiascreen/Workspace-Sofia/hero-v1.png"
           alt="Sofia Extension"
           className={styles.screenshot}
         />
+
+        <div className={styles.banner}>
+          <p>Sofia turns your web activity into a verifiable, rewarded on-chain identity.</p>
+        </div>
 
         <div className={styles.ctas}>
           <a href="https://tally.so/r/7RdaeR" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
             Join Alpha <Arrow />
           </a>
-          <a href={URLS.docs.intro} className="btn btn-light">
+          <a href="https://doc.sofia.intuition.box" className="btn btn-light">
             Read the docs <Arrow />
           </a>
         </div>
@@ -122,9 +125,6 @@ export function Hero() {
           ))}
         </div>
 
-        <div className={styles.banner}>
-          <p>Sofia turns your web activity into a verifiable, rewarded on-chain identity.</p>
-        </div>
       </div>
 
       <div className={styles.spacer} />
