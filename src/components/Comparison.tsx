@@ -1,7 +1,5 @@
-import { Arrow } from './Arrow';
 import { useScrollAnim } from '../hooks/useScrollAnim';
 import { ParallaxBg } from './ParallaxBg';
-import { URLS } from '../lib/config/urls';
 import styles from './Comparison.module.css';
 
 const ROWS = [
