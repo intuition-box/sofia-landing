@@ -12,6 +12,12 @@ interface BlogPost {
 
 const POSTS: BlogPost[] = [
   {
+    date: 'MARCH 20, 2026',
+    title: 'Logbook 20/03 — Sofia Explorer & Alpha Reward Program',
+    excerpt: 'In one week: a full behavioral reputation dashboard with feed, leaderboard, vote, streaks, and profiles. Plus a complete landing page redesign and the Alpha Reward Program launching April 27.',
+    link: URLS.blog.logbook2003,
+  },
+  {
     date: 'MARCH 13, 2026',
     title: 'Logbook #24 — Position Board & On-Chain Streaks',
     excerpt: 'After certifying a page, you now see a leaderboard of everyone who certified it. Each certifier displayed with their ENS name and avatar.',
@@ -22,12 +28,6 @@ const POSTS: BlogPost[] = [
     title: 'Logbook #23 — Vote Tab & First Claim Experience',
     excerpt: 'New Vote tab in Resonance: browse curated claims and lists, take a position with support or oppose.',
     link: URLS.blog.logbook2303,
-  },
-  {
-    date: 'FEBRUARY 27, 2026',
-    title: 'Logbook #22 — Beta Season Pool & Unified Fees',
-    excerpt: 'Unified confirmation screen with real-time fee breakdown. Beta Season Pool: a shared vault funded by every certification.',
-    link: URLS.blog.logbook2202,
   },
 ];
 

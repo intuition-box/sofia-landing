@@ -37,12 +37,14 @@ interface Advisor {
   name: string;
   role: string;
   company: string;
+  avatar: string;
+  x: string;
 }
 
 const ADVISORS: Advisor[] = [
-  { name: 'Jeremie Olivier', role: 'Mentor', company: 'Zet.box' },
-  { name: 'James Woods', role: 'Marketing Advisor', company: 'W O O D S' },
-  { name: 'Billy Luentke', role: 'Product Evangelist', company: '0xBilly' },
+  { name: 'Jeremie Olivier', role: 'Mentor', company: 'Zet.box', avatar: 'https://unavatar.io/twitter/olivierjeremie', x: 'olivierjeremie' },
+  { name: 'James Woods', role: 'Marketing Advisor', company: 'W O O D S', avatar: 'https://unavatar.io/twitter/W00DS_eth', x: 'W00DS_eth' },
+  { name: 'Billy Luentke', role: 'Product Evangelist', company: '0xBilly', avatar: 'https://unavatar.io/twitter/0xbilly', x: '0xbilly' },
 ];
 
 export function Team() {
@@ -64,11 +66,12 @@ export function Team() {
         <h3 ref={advTitleRef} className={`section-title anim ${styles.centered} ${styles.advTitle}`}>Advisors</h3>
         <div ref={advGridRef} className={`${styles.advGrid} anim`}>
           {ADVISORS.map((a) => (
-            <div key={a.name} className={styles.adv}>
+            <a key={a.name} href={`https://x.com/${a.x}`} target="_blank" rel="noopener noreferrer" className={styles.adv}>
+              <img src={a.avatar} alt={a.name} className={styles.advAvatar} />
               <div className={styles.advRole}>{a.role}</div>
               <div className={styles.advName}>{a.name}</div>
               <div className={styles.advCo}>{a.company}</div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

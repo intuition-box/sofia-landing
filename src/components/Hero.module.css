@@ -40,13 +40,25 @@
 /* Green background — expands to full width on scroll */
 .greenWrap {
   position: relative;
-  background: #c8cfb6;
   border-radius: var(--radius-lg);
   padding: 48px 48px 40px;
   max-width: none;
   margin: 0 auto;
-  will-change: margin, border-radius;
   overflow: hidden;
+}
+
+.greenBg {
+  position: absolute;
+  inset: 0;
+  background: #c8cfb6;
+  border-radius: inherit;
+  z-index: 0;
+  will-change: transform;
+}
+
+.greenWrap > :not(.greenBg) {
+  position: relative;
+  z-index: 1;
 }
 
 .screenshot {
@@ -54,7 +66,6 @@
   width: 80%;
   max-width: 720px;
   margin: 0 auto;
-  box-shadow: var(--shadow-lg);
 }
 
 .ctas {

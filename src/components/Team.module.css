@@ -50,7 +50,9 @@
   display: grid; grid-template-columns: repeat(3, 1fr);
   gap: 16px; max-width: 880px; margin: 0 auto;
 }
-.adv { text-align: center; padding: 18px; }
+.adv { text-align: center; padding: 18px; display: block; color: inherit; text-decoration: none; }
+.adv:hover .advName { color: var(--color-accent); }
+.advAvatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; margin: 0 auto 10px; display: block; }
 .advRole {
   font-size: 0.68rem; font-weight: 600; color: var(--color-accent);
   text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 3px;

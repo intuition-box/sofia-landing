@@ -10,13 +10,14 @@ export const URLS = {
   blog: {
     index: `${DOCS_BASE}/blog`,
     fromIdea: `${DOCS_BASE}/blog/From%20idea%20to%20reality`,
+    logbook2003: `${DOCS_BASE}/blog/logbook-20-03`,
     logbook2403: `${DOCS_BASE}/blog/logbook-13-03`,
     logbook2303: `${DOCS_BASE}/blog/logbook-06-03`,
     logbook2202: `${DOCS_BASE}/blog/logbook-27-02`,
   },
   external: {
     board: 'https://board-sofia.intuition.box/',
-    discord: 'https://discord.gg/bDXWsV7Bb',
+    discord: 'https://discord.gg/sofia3',
     alpha: 'https://tally.so/r/7RdaeR',
     values: 'https://sofia.intuition.box/values/',
     github: 'https://github.com/intuition-box',

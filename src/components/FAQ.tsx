@@ -14,8 +14,8 @@ const FAQS: FAQItem[] = [
   { q: 'How does Sofia work?', a: 'A browser extension tracks your web activity locally. Your personal AI analyzes interactions and you decide what to keep as verified proof. Everything on your device first.' },
   { q: 'Is my data safe?', a: <>Yes. Processed on your device with secure tech even we can't access. Our code is <a href="https://github.com/intuition-box" target="_blank" rel="noopener noreferrer">open-source</a>.</> },
   { q: "What are Sofia's core values?", a: <>Digital sovereignty, transparent integrity, identity through action, contribution-based power, and collective narrative. <a href="https://sofia.intuition.box/values/" target="_blank" rel="noopener noreferrer">Vote here</a>.</> },
-  { q: 'How can I join?', a: <>Join our <a href="https://discord.gg/39RP6h4WuH" target="_blank" rel="noopener noreferrer">Discord</a> or <a href="https://tally.so/r/7RdaeR" target="_blank" rel="noopener noreferrer">apply for alpha access</a>.</> },
-  { q: 'When will Sofia launch?', a: <>We're in alpha with early testers now. Join <a href="https://discord.gg/39RP6h4WuH" target="_blank" rel="noopener noreferrer">Discord</a> to be part of the journey.</> },
+  { q: 'How can I join?', a: <>Join our <a href="https://discord.gg/sofia3" target="_blank" rel="noopener noreferrer">Discord</a> or <a href="https://tally.so/r/7RdaeR" target="_blank" rel="noopener noreferrer">apply for alpha access</a>.</> },
+  { q: 'When will Sofia launch?', a: <>We're in alpha with early testers now. Join <a href="https://discord.gg/sofia3" target="_blank" rel="noopener noreferrer">Discord</a> to be part of the journey.</> },
 ];
 
 export function FAQ() {

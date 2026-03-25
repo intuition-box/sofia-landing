@@ -53,33 +53,26 @@ function Countdown() {
 
 export function Hero() {
   const titleRef = useScrollAnim();
-  const greenRef = useRef<HTMLDivElement>(null);
+  const bgRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const green = greenRef.current;
+    const bg = bgRef.current;
     const hero = heroRef.current;
-    if (!green || !hero) return;
+    if (!bg || !hero) return;
+
+    gsap.set(bg, { scale: 0.72, transformOrigin: 'center center' });
 
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: hero,
         start: 'top top',
-        end: 'bottom top',
-        scrub: 0.6,
+        end: '+=200vh',
+        scrub: 1,
       },
     });
 
-    tl.fromTo(green, {
-      marginLeft: 0,
-      marginRight: 0,
-      marginTop: 0,
-    }, {
-      marginLeft: -40,
-      marginRight: -40,
-      marginTop: -20,
-      ease: 'power2.inOut',
-    });
+    tl.to(bg, { scale: 1, ease: 'none' });
 
     return () => {
       tl.scrollTrigger?.kill();
@@ -95,7 +88,8 @@ export function Hero() {
 
       <Countdown />
 
-      <div ref={greenRef} className={styles.greenWrap}>
+      <div className={styles.greenWrap}>
+        <div ref={bgRef} className={styles.greenBg} />
         <img
           src="/img/sofiascreen/Workspace-Sofia/hero-v1.png"
           alt="Sofia Extension"
