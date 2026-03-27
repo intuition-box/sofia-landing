@@ -47,7 +47,7 @@ export function Navbar() {
         )}
 
         <a
-          href="https://board-sofia.intuition.box/"
+          href="https://explorer.sofia.intuition.box/"
           target="_blank"
           rel="noopener noreferrer"
           className={`btn btn-primary ${styles.cta}`}
