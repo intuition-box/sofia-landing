@@ -52,7 +52,7 @@ export function Navbar() {
           rel="noopener noreferrer"
           className={`btn btn-primary ${styles.cta}`}
         >
-          Board
+          Explorer
           <Arrow />
         </a>
 

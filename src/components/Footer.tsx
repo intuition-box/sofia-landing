@@ -11,7 +11,7 @@ const SOCIAL_LINKS = [
   { label: 'Discord', href: URLS.external.discord },
   { label: 'X', href: URLS.external.x },
   { label: 'GitHub', href: URLS.external.github },
-  { label: 'Board', href: URLS.external.board },
+  { label: 'Explorer', href: URLS.external.board },
   { label: 'Proxy Dashboard', href: URLS.external.proxyDashboard },
 ];
 
