@@ -20,23 +20,16 @@ function Countdown() {
   const [label, setLabel] = useState('');
 
   useEffect(() => {
-    const start = new Date('2026-03-27T00:00:00');
     const end = new Date('2026-04-27T00:00:00');
 
     const update = () => {
-      const now = Date.now();
-      const hasStarted = now >= start.getTime();
-      const target = hasStarted ? end : start;
-      const diff = Math.max(0, target.getTime() - now);
+      const diff = Math.max(0, end.getTime() - Date.now());
       const d = Math.floor(diff / 864e5);
       const h = Math.floor((diff % 864e5) / 36e5);
       const m = Math.floor((diff % 36e5) / 6e4);
       const s = Math.floor((diff % 6e4) / 1e3);
       setDisplay(`${d}d ${String(h).padStart(2, '0')}h ${String(m).padStart(2, '0')}m ${String(s).padStart(2, '0')}s`);
-      setLabel(hasStarted
-        ? 'until Alpha Tester Reward Program ends'
-        : 'until Alpha Tester Reward Program starts'
-      );
+      setLabel('remaining — Alpha Reward Program is live');
     };
     update();
     const id = setInterval(update, 1000);
